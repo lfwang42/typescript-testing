@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",(function(o){console.log("page load!");var e=document.getElementsByTagName("img");console.log(e);var n=[...e];console.log(n)})),window.onload=function(){}})();

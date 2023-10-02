@@ -1,0 +1,7 @@
+   //  "content_scripts": [
+   //    {
+   //       "matches": ["http://*/", "https://*/"],
+   //       "js": ["image-grabber.js"],
+   //       "run_at": "document_end"
+   //    }
+   //  ],

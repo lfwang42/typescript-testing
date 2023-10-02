@@ -6,12 +6,14 @@ let active = false;
 
 
 chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
-    if (changeInfo.status == 'complete' && tab.active) {
-        chrome.tabs.executeScript(tabId, {
-            file: "content-scripts.ts"
-        });
-    }
+    // if (changeInfo.status == 'complete' && tab.active) {
+    //     chrome.scripting.executeScript({
+    //         target: {tabId: tabId, allFrames: true},
+    //         files: ["image-grabber.js"],
+    //     });
+    // }
 });
+
 
 (async () => {
     const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});

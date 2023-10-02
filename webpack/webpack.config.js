@@ -4,6 +4,8 @@ module.exports = {
    mode: "production",
    entry: {
       background: path.resolve(__dirname, "..", "src", "background.ts"),
+      'image-grabber': path.resolve(__dirname, "..", "src", "image_grabber.ts"),
+
    },
    output: {
       path: path.join(__dirname, "../dist"),

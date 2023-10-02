@@ -1,13 +1,26 @@
 {
-    "name": "Medium Extension",
-    "description": "This extension is made for demonstration purposes",
+    "name": "Image Grabber",
+    "description": "image grabber",
     "version": "1.0",
     "manifest_version": 3,
     "permissions": [
-       "activeTab",
-       "scripting"
+      "activeTab",
+      "scripting"
     ],
-    "action": {},
+    "host_permissions": [
+      "http://*/",
+      "https://*/"
+    ],
+    "content_scripts": [
+      {
+         "matches": ["http://*/", "https://*/"],
+         "js": ["image-grabber.js"],
+         "run_at": "document_idle"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
     "background": {
        "service_worker": "background.js"
     }
